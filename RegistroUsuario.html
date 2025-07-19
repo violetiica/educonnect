@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <form action="" class="forms" id="register-form">
+            <h2>¡Registrate!</h2>
+            <div class="input-box">
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="nombre" placeholder="Ej: Maria" required>
+                
+                <label for="username">Usuario:</label>
+                <input type="text" name="username" id="nombreusuario" placeholder="Ej: mariavargas.23" required>
+                
+                <label for="correo">Correo:</label>
+                <input type="email" name="correo" id="correo" placeholder="...@gmail.com" required />
+                
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="contrasena" placeholder="Minimo 8 caracteres" required minlength="8">
+                
+                <label for="confirmar">Confirmar Contraseña</label>
+                <input type="password" name="confirmar" id="confirmar" required minlength="8">
+                
+            </div>
+            <button type="submit" class="btn">Registrarme</button>
+            <div class="register-link">
+                ¿Ya tienes una cuenta? <a href="login.html">Inicia Sesión</a>
+            </div>
+        </form>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
