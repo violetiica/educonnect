@@ -1,0 +1,93 @@
+[
+    {
+        "id": "P001",
+        "nombre": "Programación WEB",
+        "profesor": "Stephanie González",
+        "descripcion": "Curso de introducción a la programación web básico usando HTML, CSS y JavaScript.",
+        "cantestudiantes": 3,
+        "estudiantes": [
+            "elenat.23",
+            "violetica.24",
+            "claudiob.22"
+        ],
+        "materiales": [],
+        "tareas": []
+    },
+    {
+        "id": "P002",
+        "nombre": "Algoritmos y Estructuras",
+        "profesor": "Lia Mendoza",
+        "descripcion": "Curso para entender el manejo de memoria, las estructuras de datos que maneja la computadora y sus algoritmos.",
+        "cantestudiantes": 6,
+        "estudiantes": [
+            "sapito345",
+            "Estudiante_123",
+            "thefrontman001",
+            "brunoprepas",
+            "claudiob.22"
+        ],
+        "materiales": [],
+        "tareas": []
+    },
+    {
+        "id": "C005",
+        "nombre": "Ecuaciones Diferenciales",
+        "profesor": "Luis Estrada",
+        "descripcion": "Curso para entender los metodos de resolucion de las ecuaciones diferenciales.",
+        "cantestudiantes": 4,
+        "estudiantes": [
+            "Estudiante_123",
+            "violetica.24",
+            "claudiob.22",
+            "sapito345"
+        ],
+        "materiales": [],
+        "tareas": []
+    },
+    {
+        "id": "C004",
+        "nombre": "Calculo Vectorial",
+        "profesor": "Kahela Bastidas",
+        "descripcion": "Curso para el manejo de vectores en el espacio, volumen y sus aplicaciones. ",
+        "cantestudiantes": 4,
+        "estudiantes": [
+            "sapito345",
+            "violetica.24",
+            "thefrontman001",
+            "elenita.23"
+        ],
+        "materiales": [],
+        "tareas": []
+    },
+    {
+        "id": "P012",
+        "nombre": "Diseño de Interfaces",
+        "profesor": "Mariana Peña",
+        "descripcion": "Principios de usabilidad, diseño centrado en el usuario y creación de interfaces gráficas modernas.",
+        "cantestudiantes": 4,
+        "estudiantes": [
+            "thefrontman001",
+            "violetica.24",
+            "claudiob.22",
+            "Estudiante_123",
+            "luciano.uix25"
+        ],
+        "materiales": [],
+        "tareas": []
+    },
+    {
+        "id": "P005",
+        "nombre": "Arquitectura de Computadoras",
+        "profesor": "Raúl Martínez",
+        "descripcion": "Exploración detallada de la arquitectura interna de los sistemas computacionales modernos.",
+        "cantestudiantes": 3,
+        "estudiantes": [
+            "elenat.23",
+            "estudiante_123",
+            "sapito345",
+            "juanc.30"
+        ],
+        "materiales": [],
+        "tareas": []
+    }
+]

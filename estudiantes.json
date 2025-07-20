@@ -1,0 +1,31 @@
+[
+    {
+        "nombre": "Violeta Semprum",
+        "usuario": "violetica.24",
+        "correo": "vivsk0806@gmail.com",
+        "contrasena": "08022006",
+        "cursos": ["P001","C004", "C005", "P012"]
+    },
+    {
+        "nombre": "Ucvista de prueba",
+        "usuario": "Estudiante_123",
+        "correo": "estudiante123iali@gmail.com",
+        "contrasena": "IALI-2015",
+        "cursos": ["P002", "C005", "P012","P005"]
+    },
+    {
+        "nombre": "Elena Torres",
+        "usuario": "elenat.23",
+        "correo": "elenita@gmail.com",
+        "contrasena": "elenita123",
+        "cursos": ["P001","C004", "P005"]
+    },
+    {
+        "nombre": "Claudio Bermudez",
+        "usuario": "claudiob.22",
+        "correo": "claudiobermudez@gmail.com",
+        "contrasena": "CRSB0511",
+        "cursos": ["P001", "P002", "C005", "P012"]
+    }
+
+]

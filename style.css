@@ -11,6 +11,10 @@ body{
     
 }
 
+main{
+    margin: 20px;
+}
+
 .forms{
     display: flex;
     flex-direction: column;
@@ -59,4 +63,22 @@ body{
     background-color: white;
     border-radius: 20px;
     font-weight: 600; 
+}
+
+#cursos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.curso{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background: #eaf6fa;
+    border-radius: 12px;
+    margin: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }

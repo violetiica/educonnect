@@ -1,5 +1,6 @@
 class Curso {
-    constructor(nombre, profesor, descripcion, cantestudiantes, estudiantes, materiales, tareas) {
+    constructor(id,nombre, profesor, descripcion, cantestudiantes, estudiantes, materiales, tareas) {
+        this.id = id;
         this.nombre = nombre;
         this.profesor = profesor;
         this.descripcion = descripcion;
@@ -71,6 +72,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         });
     }
+
+    if (window.location.pathname.endsWith('CatalogoCursos.html')) {
+        mostrarCursos();
+    }
 });
 
 function validarsinumero(texto) {
@@ -80,7 +85,7 @@ function validarsinumero(texto) {
 
 async function buscarusuario(username, password) {
     try {
-        const response = await fetch('students.json');
+        const response = await fetch('estudiantes.json');
         const estudiantes = await response.json();
         return estudiantes.find(est => est.usuario === username && est.contrasena === password);
     } catch (error) {
@@ -89,4 +94,27 @@ async function buscarusuario(username, password) {
     }
 }
 
+async function mostrarCursos(){
+    try {
+        const response = await fetch('cursos.json');
+        const cursos = await response.json();
+        const cursosContainer = document.getElementById('cursos-container');
+
+        cursos.forEach(curso => { 
+            const cursoElement = document.createElement('div');
+            cursoElement.classList.add('curso');
+            cursoElement.innerHTML = `
+                <h3>${curso.nombre}</h3>
+                <p>Profesor: ${curso.profesor}</p>
+                <p>${curso.descripcion}</p>
+                <button onclick="inscribirCurso('${curso.id}')">Inscribirse</button>
+            `;
+            cursosContainer.appendChild(cursoElement);
+        });
+
+    }catch (error){
+        console.error('Error al leer el archivo JSON:', error);
+        return null;
+    }
+}
 
