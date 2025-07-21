@@ -1,4 +1,4 @@
-class Curso {
+/*class Curso {
     constructor(id, nombre, profesor, descripcion, categoria, nivel, duracion_horas, lo_que_aprenderas, temario_resumido, materiales, tareas) {
         this.id = id;
         this.nombre = nombre;
@@ -13,7 +13,7 @@ class Curso {
         this.tareas = tareas || [];
     }
 
-}
+}*/
 
 
 class Estudiante {
@@ -168,23 +168,37 @@ function inscribirCurso(id) {
         alert('Ya estás inscrito en este curso');
         return;
     }
-    window.location.href = `confirmacion.html?curso=${id}`;
+    window.location.href = `ConfirmacionCurso.html?curso=${id}`;
 }
 
-/*
-if (window.location.pathname.endsWith('confirmacion.html')) {
+
+if (window.location.pathname.endsWith('ConfirmacionCurso.html')) {
     document.addEventListener('DOMContentLoaded', async () => {
         const params = new URLSearchParams(window.location.search);
         const cursoId = params.get('curso');
         const resp = await fetch('cursos.json');
         const cursos = await resp.json();
         const curso = cursos.find(c => c.id === cursoId);
-        const container = document.getElementById('confirm-container');
-        container.innerHTML = `
-      <h2>${curso.nombre}</h2>
-      <p>Profesor: ${curso.profesor}</p>
-      <p>${curso.descripcion}</p>
-    `;
+        document.getElementById('curso-nombre').innerText = curso.nombre;
+        document.getElementById('curso-profesor').innerText = 'Profesor: ' + curso.profesor;
+        document.getElementById('curso-descripcion').innerText = curso.descripcion;
+        const listaAprender = document.getElementById('loqueseaprendera');
+        listaAprender.innerHTML = '';
+        curso.lo_que_aprenderas.forEach(item => {
+            const li = document.createElement('li');
+            li.innerText = item;
+            listaAprender.appendChild(li);
+        });
+        document.getElementById('categoria').innerText = 'Categoría: ' + curso.categoria;
+        document.getElementById('nivel').innerText = 'Nivel: ' + curso.nivel;
+        document.getElementById('Duracion').innerText = 'Duración: ' + curso.duracion_horas + ' horas';
+        const listatemario = document.getElementById('temario-resumido');
+        listatemario.innerHTML = '';
+        curso.temario_resumido.forEach(item => {
+            const li = document.createElement('li');
+            li.innerText = item;
+            listatemario.appendChild(li);
+        });
         document.getElementById('confirm-btn').addEventListener('click', () => {
             const user = JSON.parse(localStorage.getItem('loggedUser'));
             if (!user) return alert('Debe iniciar sesión');
@@ -195,14 +209,28 @@ if (window.location.pathname.endsWith('confirmacion.html')) {
                 localStorage.setItem('misCursos', JSON.stringify(misCursos));
             }
             alert('Inscripción confirmada');
-            window.location.href = 'misCursos.html';
+            window.location.href = 'MisCursos.html';
         });
         document.getElementById('cancel-btn').addEventListener('click', () => {
             window.history.back();
         });
     });
 }
-*/
+
+if (window.location.pathname.endsWith('perfil.html')) {
+    document.addEventListener('DOMContentLoaded', () => {
+        const user = JSON.parse(localStorage.getItem('loggedUser'));
+        const cont = document.querySelector('.infoperfil');
+        const div = document.createElement('div');
+        div.innerHTML = `
+        <p><b>Nombre: </b> ${user.nombre}</p>
+        <p><b>Usuario: </b> ${user.usuario}</p>
+        <p><b>Correo: </b> ${user.correo}</p>
+        `;
+        cont.appendChild(div);
+    });
+}
+
 if (window.location.pathname.endsWith('MisCursos.html')) {
     document.addEventListener('DOMContentLoaded', async () => {
         const user = JSON.parse(localStorage.getItem('loggedUser'));
@@ -245,6 +273,7 @@ if (window.location.pathname.endsWith('CursoDetalle.html')) {
         const cursoId = params.get('curso');
         const resp = await fetch('cursos.json');
         const cursos = await resp.json();
+        const user = JSON.parse(localStorage.getItem('loggedUser'));
         const curso = cursos.find(c => c.id === cursoId);
         document.getElementById('curso-nombre').innerText = curso.nombre;
         document.getElementById('curso-profesor').innerText = 'Profesor: ' + curso.profesor;
@@ -285,8 +314,30 @@ if (window.location.pathname.endsWith('CursoDetalle.html')) {
         document.getElementById('proyectotitulo').innerText = curso.proyecto_final.titulo;
         document.getElementById('proyecto-enunciado').innerText = curso.proyecto_final.enunciado;
 
-        const form = document.getElementById('final-project-form');
+        const entregas = JSON.parse(localStorage.getItem('entregas')) || {};
+        const entregaActual = user && entregas[user.usuario] && entregas[user.usuario][cursoId];
         const statusDiv = document.getElementById('project-status');
+        if (entregaActual) {
+            statusDiv.innerText = `Ya enviaste: ${entregaActual.fileName}`;
+            statusDiv.classList.add('success');
+            let cont = document.querySelector('aside nav');
+            const ahref = document.createElement('a');
+            ahref.href = "#calificaciones";
+            ahref.innerText = "Ver calificaciones";
+            cont.appendChild(ahref);
+            cont = document.getElementById('detallescurso-container');
+            const calificacionDiv = document.createElement('div');
+            calificacionDiv.innerHTML = `
+                <br>
+                <h2>Calificación</h2>
+                <p><strong>Nota: </strong>${entregaActual.calificacion || 'No disponible'}</p>
+                <p><strong>Comentarios: </strong>${entregaActual.comentarios || 'No hay comentarios'}</p>
+            `;
+            cont.appendChild(calificacionDiv);
+        }
+
+
+        const form = document.getElementById('final-project-form');
         form.addEventListener('submit', event => {
             event.preventDefault();
             const fileInput = document.getElementById('project-file');
@@ -296,12 +347,25 @@ if (window.location.pathname.endsWith('CursoDetalle.html')) {
             }
             const file = fileInput.files[0];
             //supuesto guardado de entrega en localStorage
-            const user = JSON.parse(localStorage.getItem('loggedUser'));
             let entregas = JSON.parse(localStorage.getItem('entregas')) || {};
+
+            const calificacion = Math.floor(Math.random() * 21);
+            let comentario = '';
+            if (calificacion >= 16) {
+                comentario = '¡Muy buen trabajo!';
+            } else if (calificacion >= 10) {
+                comentario = 'Podemos mejorar. Revisado.';
+            } else {
+                comentario = 'Lo peor que he visto en mi vida.';
+            }
+
+
             entregas[user.usuario] = entregas[user.usuario] || {};
             entregas[user.usuario][cursoId] = {
                 fileName: file.name,
-                timestamp: new Date().toISOString()
+                timestamp: new Date().toISOString(),
+                calificacion: calificacion,
+                comentarios: comentario
             };
             localStorage.setItem('entregas', JSON.stringify(entregas));
             statusDiv.innerText = '¡Proyecto enviado exitosamente!';

@@ -142,7 +142,7 @@ main{
     transform: translateY(-5px);
 }
 
-.catalogo, .miscursos, .detalles{
+.catalogo, .miscursos, .detalles, .confirminscrip, .perfil{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -244,4 +244,33 @@ aside nav a:hover {
     flex-direction: column;
     align-items: flex-end;
     gap: 1rem;
+}
+
+.perfil #perfil-icon{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.perfil .perfil-detalles{
+    margin: 20px;
+    background-color: rgb(187, 205, 252);
+    border-radius: 15px;
+    width: 440px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(180, 180, 180);
+    padding: 5px;
+}
+
+.perfil-detalles h1{
+    font-family: lexend, sans-serif;
+    font-weight: 700;
+    text-shadow: 0.5px 1px 2px rgb(105, 104, 104);
+}
+
+.infoperfil{
+    display:flex;
+    justify-content: space-between;
 }

@@ -24,17 +24,8 @@
     </header>
 
     <main>
-        <div class="detalles">
-            <aside>
-                <nav>
-                    <a href="#descripcion">Descripción</a>
-                    <a href="#info">Información Relevante</a>
-                    <a href="#temario">Temario</a>
-                    <a href="#materiales">Materiales</a>
-                    <a href="#profinal">Proyecto Final</a>
-                </nav>
-            </aside>
-            <div id="detallescurso-container">
+        <div class="confirminscrip">
+            <div id="confirm-container">
                 <h1 id="curso-nombre"></h1>
                 <p id="curso-profesor"></p>
                 <h3 id="descripcion">Descripción</h3>
@@ -49,21 +40,8 @@
                 <ul id="temario-resumido"></ul>
                 <ul id="temario-lista"></ul>
                 <br>
-                <h2 id="materiales">Materiales</h2>
-                <div id="materiales-lista"></div>
-                <br>
-                <h2 id="profinal">Proyecto Final</h2>
-                <section id="final-project-section" class="card proyecto-final">
-                    <i><h3 id="proyectotitulo"></h3>
-                    <p id="proyecto-enunciado"></p>
-                    </i>
-                    <form id="final-project-form">
-                        <label for="project-file">Sube tu proyecto final para este curso. Solo se permite un archivo.</label>
-                        <input type="file" id="project-file" accept=".zip,.pdf,.png,.jpg" required />
-                        <button type="submit">Enviar Proyecto</button>
-                    </form>
-                    <div id="project-status"></div>
-                </section>
+                <button class="btn" id="confirm-btn">Confirmar</button>
+                <button class="btn" id="cancel-btn">Cancelar</button>
             </div>
         </div>
     </main>
