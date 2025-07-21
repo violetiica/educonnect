@@ -70,11 +70,6 @@
                 "url": "https://www.youtube.com/embed/Df-sgxGzyTg?si=PULHgYS8yEIUU2Df"
             },
             {
-                "tipo": "pdf",
-                "titulo": "Estructura de datos básicas",
-                "url": "https://openaccess.uoc.edu/server/api/core/bitstreams/a54911eb-88a3-4cae-b3e4-9e8d45e89c5b/content"
-            },
-            {
                 "tipo": "enlace",
                 "titulo": "Artículo sobre árboles binarios en GeeksForGeeks",
                 "url": "https://www.geeksforgeeks.org/binary-tree-data-structure/"
@@ -83,11 +78,6 @@
                 "tipo": "video",
                 "titulo": "¡Aprende Paso a Paso Como Usar Listas Enlazadas!",
                 "url": "https://www.youtube.com/embed/qk67wS7WYxo?si=wx7XZ9UpHBMklh0I"
-            },
-            {
-                "tipo": "pdf",
-                "titulo": "Manual de ejercicios",
-                "url": "https://e-archivo.uc3m.es/rest/api/core/bitstreams/9207cf63-4d7c-463d-9591-3e0e149cbee6/content"
             }
         ],
         "proyecto_final": {

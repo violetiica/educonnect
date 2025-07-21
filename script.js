@@ -27,10 +27,10 @@ class Estudiante {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    if(!localStorage.getItem('estudiantes')){
-        cargarestudiantes(); 
+    if (!localStorage.getItem('estudiantes')) {
+        cargarestudiantes();
     }
-    
+
     const formlogin = document.getElementById('login-form');
 
     if (formlogin) {
@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const email = document.getElementById('correo').value;
             const password = document.getElementById('contrasena').value;
             const confirmarcontrasena = document.getElementById('confirmar').value;
+            let estudiantes = JSON.parse(localStorage.getItem('estudiantes')) || [];
 
             if (password !== confirmarcontrasena) {
                 alert("Error: Las contraseñas no coinciden.")
@@ -74,14 +75,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            const newstudent = new Estudiante(name, username, email, password, []);
-            let estudiantes = JSON.parse(localStorage.getItem('estudiantes')) || [];
-            estudiantes.push(newstudent);
-            localStorage.setItem('estudiantes', JSON.stringify(estudiantes));
-            localStorage.setItem('loggedUser', JSON.stringify(newstudent));
-            alert("¡Registro exitoso!");
-            window.location.href = 'CatalogoCursos.html';
-
+            const existe = estudiantes.some(est => est.usuario === username || est.correo === email);
+            if (existe) {
+                alert("Error: El nombre de usuario o el correo electrónico ya están en uso.");
+                return;
+            }
+            else{
+                const newstudent = new Estudiante(name, username, email, password, []);
+                estudiantes.push(newstudent);
+                localStorage.setItem('estudiantes', JSON.stringify(estudiantes));
+                localStorage.setItem('loggedUser', JSON.stringify(newstudent));
+                alert("¡Registro exitoso!");
+                window.location.href = 'CatalogoCursos.html';
+            }
         });
     }
 
@@ -124,7 +130,7 @@ function validarsinumero(texto) {
     return regex.test(texto);
 }
 
-async function cargarestudiantes(){
+async function cargarestudiantes() {
     try {
         const response = await fetch('estudiantes.json');
         const estudiantes = await response.json();
@@ -378,7 +384,6 @@ if (window.location.pathname.endsWith('CursoDetalle.html')) {
             entregas[user.usuario] = entregas[user.usuario] || {};
             entregas[user.usuario][cursoId] = {
                 fileName: file.name,
-                timestamp: new Date().toISOString(),
                 calificacion: calificacion,
                 comentarios: comentario
             };
