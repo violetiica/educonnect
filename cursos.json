@@ -4,60 +4,182 @@
         "nombre": "Programación WEB",
         "profesor": "Stephanie González",
         "descripcion": "Curso de introducción a la programación web básico usando HTML, CSS y JavaScript.",
-        "cantestudiantes": 3,
-        "estudiantes": [
-            "elenat.23",
-            "violetica.24",
-            "claudiob.22"
+        "categoria": "Programación",
+        "nivel": "Principiante",
+        "duracion_horas": 40,
+        "lo_que_aprenderas": [
+            "Escribir código Python.",
+            "Entender la lógica de programación.",
+            "Crear tus primeros programas."
         ],
-        "materiales": [],
-        "tareas": []
+        "temario_resumido": [
+            "Introducción a Python",
+            "Variables y datos",
+            "Control de flujo",
+            "Funciones",
+            "Manejo de archivos",
+            "Errores y excepciones"
+        ],
+        "materiales": [
+            {
+                "tipo": "video",
+                "titulo": "Fundamentos de HTML y CSS",
+                "url": "https://www.youtube.com/embed/XqFR2lqBYPs?si=lu7Bticy7bPsYRwM"
+            },
+            {
+                "tipo": "pdf",
+                "titulo": "Manual práctico de JavaScript moderno",
+                "url": "https://blog.enriqueoriol.com/wp-content/uploads/2016/05/Aprende-ES6-Javascript-moderno-Gu%C3%ADa-pr%C3%A1ctica.pdf"
+            },
+            {
+                "tipo": "enlace",
+                "titulo": "Guía oficial de Flexbox",
+                "url": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+            }
+        ],
+        "proyecto_final": {
+            "titulo": "Desarrollo de una plataforma para gestionar cursos universitarios.",
+            "enunciado": "Crea una aplicación web que permita a los usuarios registrarse, inscribirse en cursos, visualizar horarios y dejar reseñas. El sistema debe incluir validación de formularios, interacción con una API simulada, y estilos responsivos."
+        }
     },
     {
         "id": "P002",
         "nombre": "Algoritmos y Estructuras",
         "profesor": "Lia Mendoza",
         "descripcion": "Curso para entender el manejo de memoria, las estructuras de datos que maneja la computadora y sus algoritmos.",
-        "cantestudiantes": 6,
-        "estudiantes": [
-            "sapito345",
-            "Estudiante_123",
-            "thefrontman001",
-            "brunoprepas",
-            "claudiob.22"
+        "categoria": "Programación",
+        "nivel": "Intermedio",
+        "duracion_horas": 45,
+        "lo_que_aprenderas": [
+            "Diseñar algoritmos eficientes.",
+            "Implementar estructuras de datos comunes.",
+            "Resolver problemas computacionales usando Python."
         ],
-        "materiales": [],
-        "tareas": []
+        "temario_resumido": [
+            "Algoritmos y complejidad",
+            "Listas, pilas y colas",
+            "Árboles y grafos",
+            "Recursión",
+            "Ordenamiento y búsqueda",
+            "Análisis de eficiencia"
+        ],
+        "materiales": [
+            {
+                "tipo": "video",
+                "titulo": "Estructuras de Datos | Primeros Pasos",
+                "url": "https://www.youtube.com/embed/Df-sgxGzyTg?si=PULHgYS8yEIUU2Df"
+            },
+            {
+                "tipo": "pdf",
+                "titulo": "Estructura de datos básicas",
+                "url": "https://openaccess.uoc.edu/server/api/core/bitstreams/a54911eb-88a3-4cae-b3e4-9e8d45e89c5b/content"
+            },
+            {
+                "tipo": "enlace",
+                "titulo": "Artículo sobre árboles binarios en GeeksForGeeks",
+                "url": "https://www.geeksforgeeks.org/binary-tree-data-structure/"
+            },
+            {
+                "tipo": "video",
+                "titulo": "¡Aprende Paso a Paso Como Usar Listas Enlazadas!",
+                "url": "https://www.youtube.com/embed/qk67wS7WYxo?si=wx7XZ9UpHBMklh0I"
+            },
+            {
+                "tipo": "pdf",
+                "titulo": "Manual de ejercicios",
+                "url": "https://e-archivo.uc3m.es/rest/api/core/bitstreams/9207cf63-4d7c-463d-9591-3e0e149cbee6/content"
+            }
+        ],
+        "proyecto_final": {
+            "titulo": "Motor de búsqueda simplificado para archivos locales.",
+            "enunciado": "Diseña un programa que indexe archivos de texto en una carpeta local, y permita buscar palabras clave utilizando estructuras como árboles, tablas hash o listas enlazadas. El proyecto debe incluir análisis de eficiencia y pruebas de rendimiento."
+        }
     },
     {
         "id": "C005",
         "nombre": "Ecuaciones Diferenciales",
         "profesor": "Luis Estrada",
         "descripcion": "Curso para entender los metodos de resolucion de las ecuaciones diferenciales.",
-        "cantestudiantes": 4,
-        "estudiantes": [
-            "Estudiante_123",
-            "violetica.24",
-            "claudiob.22",
-            "sapito345"
+        "categoria": "Cálculo",
+        "nivel": "Intermedio",
+        "duracion_horas": 40,
+        "lo_que_aprenderas": [
+            "Resolver ecuaciones diferenciales ordinarias.",
+            "Modelar fenómenos físicos con ecuaciones.",
+            "Aplicar métodos numéricos básicos."
         ],
-        "materiales": [],
-        "tareas": []
+        "temario_resumido": [
+            "Ecuaciones de primer orden",
+            "Métodos de solución analítica",
+            "Ecuaciones lineales de segundo orden",
+            "Sistemas de ecuaciones diferenciales",
+            "Transformadas de Laplace",
+            "Aplicaciones físicas y técnicas"
+        ],
+        "materiales": [
+            {
+                "tipo": "video",
+                "titulo": "ECUACIONES DIFERENCIALES desde cero",
+                "url": "https://www.youtube.com/embed/MdKOjS8-oNw?si=CVKZeCRD-8uaZXYb"
+            },
+            {
+                "tipo": "pdf",
+                "titulo": "Introduccion a las Ecuaciones Diferenciales",
+                "url": "https://www.cmat.edu.uy/~rpotrie/documentos/pdfs/NotasEcuaciones2016.pdf"
+            },
+            {
+                "tipo": "enlace",
+                "titulo": "Aplicaciones reales de modelos SIR",
+                "url": "https://mathinsight.org/sir_model_epidemics"
+            }
+        ],
+        "proyecto_final": {
+            "titulo": "Simulador de la propagación de una enfermedad usando modelos matemáticos.",
+            "enunciado": "Implementa un modelo SIR (Susceptible-Infectado-Recuperado) en código que represente la evolución de una epidemia en una población. Incluye gráficas, parámetros editables y validación de resultados con métodos numéricos."
+        }
     },
     {
         "id": "C004",
         "nombre": "Calculo Vectorial",
         "profesor": "Kahela Bastidas",
         "descripcion": "Curso para el manejo de vectores en el espacio, volumen y sus aplicaciones. ",
-        "cantestudiantes": 4,
-        "estudiantes": [
-            "sapito345",
-            "violetica.24",
-            "thefrontman001",
-            "elenita.23"
+        "categoria": "Matemáticas",
+        "nivel": "Avanzado",
+        "duracion_horas": 50,
+        "lo_que_aprenderas": [
+            "Aplicar derivadas e integrales en campos vectoriales.",
+            "Visualizar funciones multivariables.",
+            "Entender teoremas fundamentales como Gauss y Stokes."
         ],
-        "materiales": [],
-        "tareas": []
+        "temario_resumido": [
+            "Vectores y geometría analítica",
+            "Funciones multivariables",
+            "Derivadas parciales",
+            "Integrales múltiples",
+            "Campos vectoriales",
+            "Teoremas del cálculo vectorial"
+        ],
+        "materiales": [
+            {
+                "tipo": "video",
+                "titulo": "VECTORES: ¿Flechas o Espacios Vectoriales?... ¿o ambos?",
+                "url": "https://www.youtube.com/embed/eXA4806YuqY?si=Z_tDpnE-TbIx_wDn"
+            },
+            {
+                "tipo": "pdf",
+                "titulo": "Teoremas de Gauss y Stokes explicados",
+                "url": "https://www.ugr.es/~rpaya/documentos/Teleco/Fund-Mat09.pdf"
+            },
+            {
+                "tipo": "enlace",
+                "titulo": "Calculadora online de derivadas parciales",
+                "url": "https://www.symbolab.com/solver/partial-derivative-calculator"
+            }
+        ],
+        "proyecto_final": {
+            "titulo": "Visualizador interactivo de campos vectoriales en 3D.",
+            "enunciado": "Desarrolla una herramienta que permita representar campos vectoriales, mostrando su comportamiento con diferentes funciones. El proyecto debe incluir aplicación de teoremas como Gauss o Stokes, con interpretación visual."
+        }
     },
     {
         "id": "P012",
@@ -65,29 +187,80 @@
         "profesor": "Mariana Peña",
         "descripcion": "Principios de usabilidad, diseño centrado en el usuario y creación de interfaces gráficas modernas.",
         "cantestudiantes": 4,
-        "estudiantes": [
-            "thefrontman001",
-            "violetica.24",
-            "claudiob.22",
-            "Estudiante_123",
-            "luciano.uix25"
+        "categoria": "Diseño UX/UI",
+        "nivel": "Principiante",
+        "duracion_horas": 40,
+        "lo_que_aprenderas": [
+            "Diseñar interfaces accesibles y atractivas.",
+            "Utilizar principios de usabilidad.",
+            "Prototipar con herramientas visuales."
         ],
-        "materiales": [],
-        "tareas": []
+        "temario_resumido": [
+            "Introducción al diseño UX/UI",
+            "Principios de usabilidad",
+            "Diseño centrado en el usuario",
+            "Herramientas de prototipado",
+            "Diseño adaptable y responsivo",
+            "Evaluación y retroalimentación"
+        ],
+        "materiales": [
+            {
+                "tipo": "video",
+                "titulo": "El curso de diseño UI/UX más corto del mundo",
+                "url": "https://www.youtube.com/embed/wIuVvCuiJhU?si=QzL0ZHwtfV4YuUiV"
+            },
+            {
+                "tipo": "enlace",
+                "titulo": "Guía de patrones de diseño de interfaz",
+                "url": "https://www.nngroup.com/articles/ui-patterns/"
+            }
+        ],
+        "proyecto_final": {
+            "titulo": "Rediseño de la interfaz de una app de mensajería para públicos con discapacidades visuales.",
+            "enunciado": "Crea una propuesta de interfaz (prototipo navegable) que mejore la experiencia de usuarios con baja visión. El proyecto debe considerar contraste, navegación intuitiva, tipografías accesibles y retroalimentación por voz o sonido."
+        }
     },
     {
         "id": "P005",
         "nombre": "Arquitectura de Computadoras",
         "profesor": "Raúl Martínez",
         "descripcion": "Exploración detallada de la arquitectura interna de los sistemas computacionales modernos.",
-        "cantestudiantes": 3,
-        "estudiantes": [
-            "elenat.23",
-            "estudiante_123",
-            "sapito345",
-            "juanc.30"
+        "categoria": "Sistemas Computacionales",
+        "nivel": "Intermedio",
+        "duracion_horas": 40,
+        "lo_que_aprenderas": [
+            "Comprender el funcionamiento interno de una computadora.",
+            "Analizar arquitecturas modernas y clásicas.",
+            "Relacionar hardware con rendimiento y diseño de software."
         ],
-        "materiales": [],
-        "tareas": []
+        "temario_resumido": [
+            "Componentes básicos del hardware",
+            "Representación binaria y codificación",
+            "Organización de la memoria",
+            "CPU y ciclo de instrucción",
+            "Sistemas de entrada/salida",
+            "Procesadores y arquitectura paralela"
+        ],
+        "materiales": [
+            {
+                "tipo": "video",
+                "titulo": "¿Cómo funciona un PC y que hace cada pieza? | Componentes del ordenador explicados",
+                "url": "https://www.youtube.com/embed/0zkX6nlpiSk?si=0lTUxaUYlpLun0I1"
+            },
+            {
+                "tipo": "pdf",
+                "titulo": "Arquitectura de Computadoras",
+                "url": "https://miel.unlam.edu.ar/data/contenido/3638/Unidad-01-Computadoras---Arquitecturas---RISC-V.pdf"
+            },
+            {
+                "tipo": "enlace",
+                "titulo": "Visualización de procesadores y pipelines",
+                "url": "https://www.cpu-world.com/info/architecture/pipelining.html"
+            }
+        ],
+        "proyecto_final": {
+            "titulo": "Simulador de una CPU simple con ejecución de instrucciones.",
+            "enunciado": "Desarrolla un simulador que represente el ciclo de ejecución de instrucciones en una CPU, incluyendo operaciones aritméticas, lógicas y de control. El proyecto debe permitir visualizar el flujo de datos y el estado de los registros."
+        }
     }
 ]

@@ -2,28 +2,97 @@
     font-family: Poppins, sans-serif;
 }
 
-body{
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    box-shadow: #8b8b8b 0px 2px 5px;
+    height: 65px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.navbar{
     display:flex;
     justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    background-color: white;
     
 }
 
+.navbar a{
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: black;
+    font-family: lexend, sans-serif;
+}
+
+.navbar a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+    color: rgb(109, 147, 241);
+}
+
+.icons * {
+    justify-content: end;
+    cursor:pointer;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+#logo{
+    justify-content: start;
+    width: 180px;
+    height: 65px;
+    margin: 10px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 14px;
+}
+
+footer p{
+    font-weight: bold;
+}
+
+body{
+    min-height: 97vh;
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    background-color: rgb(161, 185, 247);
+}
+
 main{
+    flex: 1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     margin: 20px;
 }
 
 .forms{
+    margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    background-color: rgb(212, 244, 245);
+    background-color: rgb(255, 255, 255);
     width:400px;
     padding: 25px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+}
+
+.forms h2{
+    font-size: 30px;
+    font-family: lexend, sans-serif;
+    font-weight: 700;
 }
 
 .input-box {
@@ -35,7 +104,7 @@ main{
 .input-box input{
     width:250px;
     padding: 10px;
-    border: 2px solid white;
+    border: 2px solid rgb(180, 180, 180);
     border-radius: 20px;
 }
 
@@ -53,19 +122,56 @@ main{
 .register-link a:hover{
     cursor: pointer;
     text-decoration: underline;
-    color: rgb(118, 118, 118);
+    font-weight: bold;
+    color: rgb(109, 147, 241);
 }
 
 .btn{
     cursor:pointer;
     width:150px;
-    height: 30px;
-    background-color: white;
+    border: none;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    color: white;
     border-radius: 20px;
     font-weight: 600; 
 }
 
+.btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+    transform: translateY(-5px);
+}
+
+.catalogo, .miscursos, .detalles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width:100%;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+}
+
+.detalles{
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.catalogo h2{
+    font-family: lexend, sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
 #cursos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#mis-cursos-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -76,9 +182,66 @@ main{
     display: flex;
     flex-direction: column;
     width: 300px;
-    background: #eaf6fa;
+    background-color: rgb(218, 229, 255);
     border-radius: 12px;
     margin: 15px;
     padding: 15px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+aside{
+    background-color: black;
+    width: 260px;
+    height: 100%;
+    padding: 1.5rem 1rem;
+    border-radius: 15px;
+    margin: 25px;
+    
+}
+
+aside nav{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+aside nav a{
+    color: white;
+    text-decoration:none;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.25rem;
+    border-radius: 5px;
+}
+
+aside nav a:hover {
+    background-color: rgb(67, 67, 67);
+    
+}
+
+.detalles h1{
+    color:rgb(74, 109, 199);
+    font-family: lexend, sans-serif;
+}
+
+.detalles h3{
+    margin-bottom: 10px;
+}
+
+.detalles p{
+    margin:5px;
+}
+
+.detalles li{
+    margin:5px;
+}
+
+.proyecto-final{
+    width:750px;
+}
+
+#final-project-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
 }
