@@ -27,6 +27,10 @@ class Estudiante {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    if(!localStorage.getItem('estudiantes')){
+        cargarestudiantes(); 
+    }
+    
     const formlogin = document.getElementById('login-form');
 
     if (formlogin) {
@@ -34,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             const username = document.getElementById('nombreusuario').value;
             const password = document.getElementById('contrasena').value;
-            const user = await buscarusuario(username, password);
+            const user = buscarusuario(username, password);
             if (user) {
                 localStorage.setItem('loggedUser', JSON.stringify(user));
                 let misCursos = JSON.parse(localStorage.getItem('misCursos')) || {};
@@ -43,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert('¡Inicio de sesión exitoso!');
                 window.location.href = 'CatalogoCursos.html';
             } else {
-                alert('Usuario o contraseña incorrectos');
+                alert('Usuario no encontrado.');
             }
         });
     }
@@ -120,15 +124,21 @@ function validarsinumero(texto) {
     return regex.test(texto);
 }
 
-async function buscarusuario(username, password) {
+async function cargarestudiantes(){
     try {
         const response = await fetch('estudiantes.json');
         const estudiantes = await response.json();
-        return estudiantes.find(est => est.usuario === username && est.contrasena === password);
-    } catch (error) {
+        localStorage.setItem('estudiantes', JSON.stringify(estudiantes));
+    }
+    catch (error) {
         console.error('Error al leer el archivo JSON:', error);
         return null;
     }
+}
+
+function buscarusuario(username, password) {
+    const estudiantes = JSON.parse(localStorage.getItem('estudiantes')) || [];
+    return estudiantes.find(est => est.usuario === username && est.contrasena === password);
 }
 
 async function mostrarCursos() {
@@ -207,6 +217,11 @@ if (window.location.pathname.endsWith('ConfirmacionCurso.html')) {
             if (!misCursos[user.usuario].includes(cursoId)) {
                 misCursos[user.usuario].push(cursoId);
                 localStorage.setItem('misCursos', JSON.stringify(misCursos));
+                const estudiantes = JSON.parse(localStorage.getItem('estudiantes')) || [];
+                const index = estudiantes.findIndex(est => est.usuario === user.usuario);
+                console.log("ayudame: " + user.usuario);
+                estudiantes[index].cursos = misCursos[user.usuario];
+                localStorage.setItem('estudiantes', JSON.stringify(estudiantes));
             }
             alert('Inscripción confirmada');
             window.location.href = 'MisCursos.html';
