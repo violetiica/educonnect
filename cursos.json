@@ -119,8 +119,8 @@
             },
             {
                 "tipo": "enlace",
-                "titulo": "Aplicaciones reales de modelos SIR",
-                "url": "https://mathinsight.org/sir_model_epidemics"
+                "titulo": "Calculadora de Ecuaciones diferenciales",
+                "url": "https://mathdf.com/dif/es/"
             }
         ],
         "proyecto_final": {
@@ -201,8 +201,8 @@
             },
             {
                 "tipo": "enlace",
-                "titulo": "Guía de patrones de diseño de interfaz",
-                "url": "https://www.nngroup.com/articles/ui-patterns/"
+                "titulo": "Enlaces vs Botones",
+                "url": "https://aprenderuxui.com/enlaces-vs-botones/aprender/uidesign/"
             }
         ],
         "proyecto_final": {
@@ -244,13 +244,57 @@
             },
             {
                 "tipo": "enlace",
-                "titulo": "Visualización de procesadores y pipelines",
-                "url": "https://www.cpu-world.com/info/architecture/pipelining.html"
+                "titulo": "¿Que es la arquitectura de computadoras?",
+                "url": "https://www.profesionalreview.com/2022/10/01/arquitectura-de-computadoras/"
             }
         ],
         "proyecto_final": {
             "titulo": "Simulador de una CPU simple con ejecución de instrucciones.",
             "enunciado": "Desarrolla un simulador que represente el ciclo de ejecución de instrucciones en una CPU, incluyendo operaciones aritméticas, lógicas y de control. El proyecto debe permitir visualizar el flujo de datos y el estado de los registros."
         }
+    },
+    {
+        "id": "C010",
+        "nombre": "Calculo Integral",
+        "profesor": "Liliana Lupo",
+        "descripcion": " Este curso proporciona una sólida introducción al cálculo integral, cubriendo los conceptos fundamentales, técnicas de integración y sus aplicaciones en diversas áreas.",
+        "categoria": "Matemáticas",
+        "nivel": "Intermedio",
+        "duracion_horas": 50,
+        "lo_que_aprenderas": [
+            "Comprender el concepto de la integral definida e indefinida y su relación con la derivada.",
+            "Dominar diversas técnicas de integración para resolver una amplia gama de problemas.",
+            "Aplicar el cálculo integral para resolver problemas de área, volumen, longitud de arco y otras aplicaciones en ciencia e ingeniería."
+        ],
+        "temario_resumido": [
+            "Antiderivada",
+            "Reglas basicas de integracion",
+            "Tecnicas de integracion",
+            "Integral definida",
+            "Aplicaciones de la integral definida",
+            "Integrales impropias y series"
+        ],
+        "materiales": [
+            {
+                "tipo": "video",
+                "titulo": "INTEGRALES - introduccion",
+                "url": "https://www.youtube.com/embed/d7Y9Om4KCUM?si=4ohXDNwjQruUJ64z"
+            },
+            {
+                "tipo": "pdf",
+                "titulo": "Tabla de integrales inmediatas",
+                "url": "https://www.ofimega.es/Manuales/BAT/Integrales.pdf"
+            },
+            {
+                "tipo": "enlace",
+                "titulo": "Integrales",
+                "url": "https://www.superprof.es/apuntes/escolar/matematicas/calculo/integrales/"
+            }
+        ],
+        "proyecto_final": {
+            "titulo": "Uso de integrales en la física.", 
+            "enunciado": "Desarrolla un proyecto que aplique el cálculo integral para resolver problemas físicos, como el cálculo de áreas bajo curvas de velocidad para determinar desplazamientos, o el cálculo de volúmenes de sólidos de revolución. El proyecto debe incluir la formulación del problema, la solución integral y una interpretación física de los resultados."
+        }
     }
+
 ]
